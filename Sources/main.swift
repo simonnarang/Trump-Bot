@@ -2,7 +2,7 @@ import Foundation
 import TelegramBot
 import SwiftyJSON
 
-let bot = TelegramBot(token: "203884237:AAElES4LpR26MxR-EDT6-hYGTDhp4xgKANY")
+let bot = TelegramBot(token: "....")
 let router = Router(bot: bot)
 
 
