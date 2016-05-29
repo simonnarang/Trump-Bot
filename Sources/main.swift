@@ -1,5 +1,6 @@
 import Foundation
 import TelegramBot
+import SwiftyJSON
 
 let bot = TelegramBot(token: "203884237:AAElES4LpR26MxR-EDT6-hYGTDhp4xgKANY")
 let router = Router(bot: bot)
@@ -76,7 +77,7 @@ class Controller {
         
         let text = args.scanRestOfString()
         
-        
+        3
         if text.range(of: "i am dumb") != nil {
         
             bot.respondAsync("I love people like you!")
@@ -89,7 +90,11 @@ class Controller {
             
             bot.respondAsync("There isnt any denying it. I am god in human form. Why do you think I am the richest man on Earth? My self funded campagn ensures no bribery while I am in office, only my thoughts, and nobody can think like me. \(message.from.first_name), I know everything about you. Your last name is \(message.from.last_name!) which makes me want to throw up. I also know you are behind on your loans so do us all a favor and dissapear.")
         
-        } else {
+        } else if text.range(of: "how are the primaries") != nil {
+            
+            
+        
+        }else {
         
             bot.respondAsync("\(message.from.first_name), I couldn't understand that so I'm guessing it wasnt english. Go back over the wall.")
             print("yo: \(bot.lastMessage)")
@@ -97,7 +102,6 @@ class Controller {
         }
         return true
     }
-    
 }
 
 let controller = Controller(bot: bot)
